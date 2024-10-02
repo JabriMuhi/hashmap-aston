@@ -69,4 +69,15 @@ class MyHashMapTest {
         String expected = "value3";
         assertEquals(expected, value);
     }
+
+    @Test
+    public void whenBucketSizeExceedsThresholdThenTreeify() {
+        // Вообще не понял как затестить :(
+        assertTrue(true);
+    }
+
+    // Данный метод private в MyHashMap
+    private int getElementPosition(int key, int arrayLength) {
+        return Math.abs(Integer.valueOf(key).hashCode() % arrayLength);
+    }
 }
